@@ -46,9 +46,6 @@ setup(
                 "src/io/svo.cpp",
                 "src/io/filter_parent.cpp",
                 "src/io/filter_neighbor.cpp",
-                # Rasterization functions
-                "src/rasterize/rasterize.cu",
-                
                 # main
                 "src/ext.cpp",
             ],

@@ -3,7 +3,6 @@
 #include "convert/api.h"
 #include "io/api.h"
 #include "serialize/api.h"
-#include "rasterize/api.h"
 
 
 PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
@@ -32,6 +31,4 @@ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
     m.def("decode_sparse_voxel_octree_attr_parent_cpu", &decode_sparse_voxel_octree_attr_parent_cpu, py::call_guard<py::gil_scoped_release>());
     m.def("encode_sparse_voxel_octree_attr_neighbor_cpu", &encode_sparse_voxel_octree_attr_neighbor_cpu, py::call_guard<py::gil_scoped_release>());
     m.def("decode_sparse_voxel_octree_attr_neighbor_cpu", &decode_sparse_voxel_octree_attr_neighbor_cpu, py::call_guard<py::gil_scoped_release>());
-    // Rasterization functions
-    m.def("rasterize_voxels_cuda", &rasterize_voxels_cuda);
 }
